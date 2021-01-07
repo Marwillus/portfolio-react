@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Nav";
+import Jumbo from "./components/Jumbo";
+import About from "./components/About";
+import Form from "./components/Form";
+import ModalSkillz from "./components/ModalSkillz";
+import "./App.css";
+import ModalStuff from "./components/ModalStuff";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false,
+    };
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal() {
+    console.log("open modal");
+    this.setState({ show: true });
+  }
+  closeModal() {
+    console.log("close modal");
+    this.setState({ show: false });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Navbar />
+        <Jumbo />
+        <About openModal={this.openModal} />
+        <ModalSkillz show={this.state.show} closeModal={this.closeModal} />
+        <ModalStuff show={this.state.show} closeModal={this.closeModal} />
+        <Form />
+      </div>
+    );
+  }
 }
 
 export default App;
