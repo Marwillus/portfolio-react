@@ -163,7 +163,12 @@ class App extends React.Component {
         <Navbar />
         <Jumbo />
         <About openModal={this.openModal} />
-        <ModalSkillz show={this.state.show} closeModal={this.closeModal} />
+        <ModalSkillz
+          show={this.state.show}
+          closeModal={this.closeModal}
+          jobs={this.state.jobs}
+          skills={this.state.skills}
+        />
         {/* <ModalStuff show={this.state.show} closeModal={this.closeModal} /> */}
         <Form />
         <Footer />
