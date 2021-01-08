@@ -1,5 +1,7 @@
 const ModalStuff = ({ closeModal, show }) => {
-  const showHideClassName = show ? "modal display-block" : "modal display-none";
+  const showHideClassName = show
+    ? "modal-stuff display-block"
+    : "modal display-none";
 
   return (
     <div className={showHideClassName} onClick={() => closeModal}>
