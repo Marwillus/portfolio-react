@@ -10,12 +10,10 @@ const About = (props) => {
         or if you want to collab.
       </div>
       <div className={"about-button"} onClick={props.openModal}>
-        <h1>My</h1>
-        <h1>Skillz</h1>
+        <h1>MySkillz</h1>
       </div>
-      <div className={"about-button"} onClick={props.openModal}>
-        <h1>My</h1>
-        <h1>Style</h1>
+      <div className={"about-button"} onClick={props.openSwiper}>
+        <h1>MyStyle</h1>
       </div>
     </section>
   );

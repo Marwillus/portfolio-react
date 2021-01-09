@@ -1,6 +1,6 @@
 import Job from "./Job";
 
-const ModalSkillz = (props) => {
+const SkillsModal = (props) => {
   const showHideClassName = props.show
     ? "modal display-block"
     : "modal display-none";
@@ -40,4 +40,4 @@ const ModalSkillz = (props) => {
   );
 };
 
-export default ModalSkillz;
+export default SkillsModal;

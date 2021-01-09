@@ -3,16 +3,17 @@ import Navbar from "./components/Nav";
 import Jumbo from "./components/Jumbo";
 import About from "./components/About";
 import Form from "./components/Form";
-import ModalSkillz from "./components/ModalSkillz";
+import SkillsModal from "./components/SkillsModal";
 import "./App.css";
-import ModalStuff from "./components/ModalStuff";
+import ProjectSwiper from "./components/ProjectSwiper";
 import Footer from "./components/Footer";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false,
+      showModal: false,
+      showSwiper: false,
       jobs: [
         {
           job: "Fullstack Developer",
@@ -130,14 +131,14 @@ class App extends React.Component {
         {
           name: "Chilldome",
           type: "furniture",
-          mainImage: "#",
+          mainImage: "https://picsum.photos/200/300",
           images: [1, 2, 3],
           description: "blalalala",
         },
         {
           name: "Cyber Daftpunk Helmet",
           type: "gadget",
-          mainImage: "#",
+          mainImage: "https://picsum.photos/200/300",
           images: [1, 2, 3],
           description: "blalalala",
         },
@@ -145,16 +146,22 @@ class App extends React.Component {
     };
 
     this.openModal = this.openModal.bind(this);
+    this.openSwiper = this.openSwiper.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
-  openModal() {
+  openModal(e) {
     console.log("open modal");
-    this.setState({ show: true });
+    this.setState({ showModal: true });
+  }
+  openSwiper() {
+    console.log("open swiper");
+    this.setState({ showSwiper: true });
   }
   closeModal() {
     console.log("close modal");
-    this.setState({ show: false });
+    this.setState({ showModal: false });
+    this.setState({ showSwiper: false });
   }
 
   render() {
@@ -162,14 +169,18 @@ class App extends React.Component {
       <div className="App">
         <Navbar />
         <Jumbo />
-        <About openModal={this.openModal} />
-        <ModalSkillz
-          show={this.state.show}
+        <About openModal={this.openModal} openSwiper={this.openSwiper} />
+        <SkillsModal
+          show={this.state.showModal}
           closeModal={this.closeModal}
           jobs={this.state.jobs}
           skills={this.state.skills}
         />
-        {/* <ModalStuff show={this.state.show} closeModal={this.closeModal} /> */}
+        <ProjectSwiper
+          show={this.state.showSwiper}
+          closeModal={this.closeModal}
+          projects={this.state.projects}
+        />
         <Form />
         <Footer />
       </div>

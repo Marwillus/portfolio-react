@@ -109,16 +109,26 @@ nav {
   z-index: 1;
 }
 
-.modal-main {
+.modal-main,
+.swiper-main {
   position: fixed;
   overflow: hidden;
   background: rgb(255, 255, 255);
   width: 80%;
   height: 80%;
-  top: -150%;
-  left: 50%;
   transform: translate(-50%, -50%);
   animation: drop 0.6s ease-in forwards;
+}
+.modal-main {
+  top: -150%;
+  left: 50%;
+  animation: drop 0.6s ease-in forwards;
+}
+.swiper-main {
+  width: 100%;
+  top: 50%;
+  left: 150%;
+  animation: swipe 0.6s ease-in forwards;
 }
 @keyframes drop {
   0% {
@@ -135,10 +145,20 @@ nav {
     opacity: 1;
   }
 }
-.close-btn {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+@keyframes swipe {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    left: 45%;
+  }
+  90% {
+    left: 52%;
+  }
+  100% {
+    left: 50%;
+    opacity: 1;
+  }
 }
 
 .modal-left-bg {
