@@ -1,5 +1,11 @@
 import React from "react";
-import Slider from "./Swiper";
+import Swiper from "react-id-swiper";
+import SwiperCore, { Navigation, Pagination, EffectCoverflow } from "swiper";
+
+import "swiper/swiper.scss";
+import "swiper/components/effect-coverflow/effect-coverflow.min.css";
+
+SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
 
 const ProjectSwiper = (props) => {
   const showHideClassName = props.show
@@ -10,19 +16,29 @@ const ProjectSwiper = (props) => {
       props.closeModal();
     }
   };
-  const settings = {
+
+  const params = {
     effect: "coverflow",
+    grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 2,
+    slidesPerView: "auto",
     coverflowEffect: {
-      rotate: 90, // Slide rotate in degrees
-      stretch: 40, // Stretch space between slides (in px)
-      depth: 300, // Depth offset in px (slides translate in Z axis)
-      modifier: 1, // Effect multipler
-      slideShadows: false, // Enables slides shadows
+      rotate: 70,
+      stretch: 60,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   };
-  const data = [...Array(10).keys()];
 
   return (
     <div
@@ -31,32 +47,26 @@ const ProjectSwiper = (props) => {
       onClick={(e) => versteckModal(e)}
     >
       <section className={"swiper-main"}>
-        {/* <Swiper
-          // effect={"coverflow"}
-          spaceBetween={50}
-          // pagination={{ el: ".swiper-pagination" }}
-        >
-          {props.projects.map((project, index) => {
-            <SwiperSlide>
+        <Swiper {...params}>
+          {props.projects.map((project, index) => (
+            <div key={index}>
               <div
                 className="project-img"
-                style={{ backgroundImage: project.mainImage }}
+                style={{
+                  backgroundImage: `url(${index + 1}.jpg)`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
               >
-                <div className="project-info">
-                  <h1>{project.name}</h1>
-                  <p>{project.description}</p>
-                </div>
+                {" "}
               </div>
-            </SwiperSlide>;
-          })}
-
-          <div class="swiper-pagination"></div>
-        </Swiper> */}
-        <Slider settings={settings}>
-          {data.map((item) => (
-            <img src="https://picsum.photos/200/300" key={item} alt="swipe" />
+              <div className="project-info">
+                <h1>{project.name}Project</h1>
+                <p>{project.description}</p>
+              </div>
+            </div>
           ))}
-        </Slider>
+        </Swiper>
       </section>
     </div>
   );

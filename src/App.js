@@ -8,6 +8,12 @@ import "./App.css";
 import ProjectSwiper from "./components/ProjectSwiper";
 import Footer from "./components/Footer";
 
+import Bild1 from "./components/Trees/1.jpg";
+import Bild2 from "./components/Trees/2.jpg";
+import Bild3 from "./components/Trees/3.jpg";
+import Bild4 from "./components/Trees/4.jpg";
+import Bild5 from "./components/Trees/5.jpg";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -129,16 +135,37 @@ class App extends React.Component {
       ],
       projects: [
         {
-          name: "Chilldome",
+          name: "Living Room",
           type: "furniture",
-          mainImage: "https://picsum.photos/200/300",
+          mainImage: { Bild1 },
           images: [1, 2, 3],
           description: "blalalala",
         },
         {
           name: "Cyber Daftpunk Helmet",
           type: "gadget",
-          mainImage: "https://picsum.photos/200/300",
+          mainImage: { Bild2 },
+          images: [1, 2, 3],
+          description: "blalalala",
+        },
+        {
+          name: "Sound WallE",
+          type: "gadget",
+          mainImage: { Bild3 },
+          images: [1, 2, 3],
+          description: "blalalala",
+        },
+        {
+          name: "AmbiLight",
+          type: "gadget",
+          mainImage: { Bild4 },
+          images: [1, 2, 3],
+          description: "blalalala",
+        },
+        {
+          name: "Skateboard",
+          type: "gadget",
+          mainImage: { Bild5 },
           images: [1, 2, 3],
           description: "blalalala",
         },
