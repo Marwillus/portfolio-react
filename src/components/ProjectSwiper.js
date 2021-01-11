@@ -2,7 +2,7 @@ import React from "react";
 import Swiper from "react-id-swiper";
 import SwiperCore, { Navigation, Pagination, EffectCoverflow } from "swiper";
 
-import "swiper/swiper.scss";
+import "swiper/swiper-bundle.css";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 
 SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
@@ -61,7 +61,7 @@ const ProjectSwiper = (props) => {
                 {" "}
               </div>
               <div className="project-info">
-                <h1>{project.name}Project</h1>
+                <h1>{project.name}</h1>
                 <p>{project.description}</p>
               </div>
             </div>

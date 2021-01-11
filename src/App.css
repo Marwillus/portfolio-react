@@ -183,15 +183,15 @@ nav {
 }
 .project-info {
   position: absolute;
-  bottom: 40px;
-  right: 40px;
+  bottom: 60px;
+  right: 60px;
   padding: 2rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   z-index: 1;
   background: inherit;
   overflow: hidden;
-  transform: translateZ(20px);
+  transform: translateZ(50px);
 }
 .project-info:before {
   content: "";
@@ -202,8 +202,8 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.603);
-  filter: blur(15px);
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.753);
+  backdrop-filter: blur(150px);
   margin: -20px;
 }
 
