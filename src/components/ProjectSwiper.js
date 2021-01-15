@@ -49,7 +49,14 @@ const ProjectSwiper = (props) => {
       <section className={"swiper-main"}>
         <Swiper {...params}>
           <div className={"swiper-intro"}>
-            <div className="project-intro-img"></div>
+            <div
+              className="project-intro-img"
+              style={{
+                backgroundImage: `url(${"style-intro"}.jpg)`,
+                backgroundSize: "cover",
+                backgroundPositionY: "-10px",
+              }}
+            ></div>
             <div className="project-intro-info">
               <img src="logo_nobg.svg" alt="logo" />
               <p>
