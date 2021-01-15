@@ -1,0 +1,13 @@
+#footer {
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #fdeddc;
+  padding: 6px;
+}
+.icons {
+  color: #fdeddc;
+  padding: 1rem;
+}

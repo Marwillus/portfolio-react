@@ -1,0 +1,39 @@
+.about {
+  height: 35rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-text {
+  width: 400px;
+  top: 200px;
+  color: #fdeddc;
+  font-size: 1.6rem;
+  text-shadow: 3px 3px 2px black;
+}
+.about-button {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #b3cbe7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 8px 2px black;
+  font-size: 3.5rem;
+  cursor: pointer;
+}
+.about-button:hover {
+  box-shadow: 2px 1px 2px black;
+  font-size: 3.4rem;
+  transform: rotate(2deg);
+  transition: 0.3s;
+}
+.about-button h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #fdeddc;
+  text-align: center;
+  display: block;
+  text-shadow: 3px 3px 2px black;
+}

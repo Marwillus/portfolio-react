@@ -1,0 +1,23 @@
+nav {
+  background-color: #feb062;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.navbar li {
+  padding: 20px;
+}
+.navbar li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.6rem;
+}
+.logo {
+  position: absolute;
+  right: 20px;
+  padding: 20px;
+  height: 4rem;
+  color: #fbcea1;
+}

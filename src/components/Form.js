@@ -2,9 +2,14 @@ const Form = () => {
   return (
     <div className={"form"} id={"contact"}>
       <div className={"form-skewed"}></div>
-      <form>
+      <form action="https://formspree.io/f/meqpvbay" method="POST">
         <input type="text" name="name" id="input-name" placeholder="name" />
-        <input type="email" name="email" id="input-email" placeholder="email" />
+        <input
+          type="email"
+          name="_replyto"
+          id="input-email"
+          placeholder="email"
+        />
         <textarea
           name="message"
           id="input-message"

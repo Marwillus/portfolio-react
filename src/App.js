@@ -1,18 +1,13 @@
 import React from "react";
+import "./App.css";
 import Navbar from "./components/Nav";
 import Jumbo from "./components/Jumbo";
 import About from "./components/About";
-import Form from "./components/Form";
+// import Form from "./components/Form";
+import MyForm from "./components/MyForm";
 import SkillsModal from "./components/SkillsModal";
-import "./App.css";
 import ProjectSwiper from "./components/ProjectSwiper";
 import Footer from "./components/Footer";
-
-import Bild1 from "./components/Trees/1.jpg";
-import Bild2 from "./components/Trees/2.jpg";
-import Bild3 from "./components/Trees/3.jpg";
-import Bild4 from "./components/Trees/4.jpg";
-import Bild5 from "./components/Trees/5.jpg";
 
 class App extends React.Component {
   constructor(props) {
@@ -137,35 +132,35 @@ class App extends React.Component {
         {
           name: "Living Room",
           type: "furniture",
-          mainImage: { Bild1 },
+          mainImage: "",
           images: [1, 2, 3],
           description: "blalalala",
         },
         {
           name: "Cyber Daftpunk Helmet",
           type: "gadget",
-          mainImage: { Bild2 },
+          mainImage: "",
           images: [1, 2, 3],
           description: "blalalala",
         },
         {
           name: "Sound WallE",
           type: "gadget",
-          mainImage: { Bild3 },
+          mainImage: "",
           images: [1, 2, 3],
           description: "blalalala",
         },
         {
           name: "AmbiLight",
           type: "gadget",
-          mainImage: { Bild4 },
+          mainImage: "",
           images: [1, 2, 3],
           description: "blalalala",
         },
         {
           name: "Skateboard",
           type: "gadget",
-          mainImage: { Bild5 },
+          mainImage: "",
           images: [1, 2, 3],
           description: "blalalala",
         },
@@ -197,18 +192,19 @@ class App extends React.Component {
         <Navbar />
         <Jumbo />
         <About openModal={this.openModal} openSwiper={this.openSwiper} />
+        <ProjectSwiper
+          show={this.state.showSwiper}
+          closeModal={this.closeModal}
+          projects={this.state.projects}
+        />
         <SkillsModal
           show={this.state.showModal}
           closeModal={this.closeModal}
           jobs={this.state.jobs}
           skills={this.state.skills}
         />
-        <ProjectSwiper
-          show={this.state.showSwiper}
-          closeModal={this.closeModal}
-          projects={this.state.projects}
-        />
-        <Form />
+
+        <MyForm />
         <Footer />
       </div>
     );
