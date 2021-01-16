@@ -10,9 +10,9 @@ nav {
   padding: 20px;
 }
 .navbar li a {
-  text-decoration: none;
+  cursor: pointer;
   color: rgb(255, 255, 255);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 .logo {
   position: absolute;

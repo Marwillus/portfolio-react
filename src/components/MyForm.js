@@ -16,9 +16,10 @@ export default class MyForm extends React.Component {
   render() {
     const { status } = this.state;
     return (
-      <div className={"form"} id={"contact"}>
+      <div className={"form-container"} id={"contact"}>
         <div className={"form-skewed"}></div>
         <form
+          className="form"
           onSubmit={this.submitForm}
           action="https://formspree.io/f/meqpvbay"
           method="POST"

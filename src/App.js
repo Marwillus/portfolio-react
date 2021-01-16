@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+
 import Navbar from "./components/Nav";
 import Jumbo from "./components/Jumbo";
 import About from "./components/About";

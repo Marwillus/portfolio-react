@@ -68,26 +68,31 @@
 .modal-left-bg {
   position: absolute;
   left: -5%;
-  width: 55%;
+  width: 50%;
   height: 100%;
-  background-color: #7d9ebe;
+  background-color: #2c3e50;
   transform: skew(6deg);
   z-index: -1;
 }
 .timeline {
   position: relative;
-  left: 15%;
-  width: 18%;
+  /* left: 15%; */
+  width: 5%;
   height: 100%;
-  background: linear-gradient(0deg, #7d9ebe 0%, #ffffff);
+  background: linear-gradient(0deg, #2c3e50 10%, #ffffff 90%);
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .timeline p {
   transform: rotate(270deg);
+  position: relative;
+  right: 2rem;
+  padding: 1rem;
+  color: #f4f4f498;
 }
 .skill-container {
   height: 100%;
@@ -103,6 +108,9 @@
 }
 .job-list {
   list-style: none;
+}
+.job-list > * {
+  padding: 0.2rem;
 }
 .job-info {
   width: 50%;
@@ -127,6 +135,8 @@
   top: -2rem;
   font-size: 2rem;
 }
+
+/* swiper stuff */
 
 .swiper-container {
   height: 100%;

@@ -1,4 +1,13 @@
 import Logo from "../images/logo_symbol.svg";
+import {
+  Link,
+  DirectLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 import "./styles/navbar.css";
 
 const Navbar = () => {
@@ -6,10 +15,28 @@ const Navbar = () => {
     <nav>
       <ul className={"navbar"}>
         <li>
-          <a href="#about">About</a>
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            About
+          </Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Contact
+          </Link>
         </li>
         <img src={Logo} alt="logo" className={"logo"} />
       </ul>

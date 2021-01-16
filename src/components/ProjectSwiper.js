@@ -52,7 +52,7 @@ const ProjectSwiper = (props) => {
             <div
               className="project-intro-img"
               style={{
-                backgroundImage: `url(${"style-intro"}.jpg)`,
+                backgroundImage: `url(style-intro.jpg)`,
                 backgroundSize: "cover",
                 backgroundPositionY: "-10px",
               }}
@@ -62,9 +62,9 @@ const ProjectSwiper = (props) => {
               <p>
                 Over the past years I created a lot of stuff. Furniture,
                 Gadgets, everything I was interested in and mostly to learn new
-                skills during the crafting-process. I present you a few projects
-                I build in my sparetime of and I hope you like them as much as i
-                do.
+                skills during the crafting-process. I present to you a few
+                projects I build in my sparetime of and I hope you like them as
+                much as i do.
               </p>
             </div>
           </div>

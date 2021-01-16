@@ -1,7 +1,6 @@
 import Job from "./Job";
 import "./styles/modals.css";
-
-// import { IoClose } from "react-icons/io5";
+import { IoCaretUpSharp } from "react-icons/io5";
 
 const SkillsModal = (props) => {
   const showHideClassName = props.show
@@ -13,7 +12,6 @@ const SkillsModal = (props) => {
     }
   };
   return (
-    // Hier habe ich ein ID hinzugefügt, um schnell das element finden zu können
     <div
       id="modalFrame"
       className={showHideClassName}
@@ -27,18 +25,18 @@ const SkillsModal = (props) => {
           color: "#f4f4f4",
           top: "1rem",
           right: "1rem",
-        }} */}
-      />
+        }}
+        /> */}
+
       <section className={"modal-main"}>
-        <div className="modal-left-bg">
-          <div className="timeline">
-            <p>2021</p>
-            <p>2002</p>
-          </div>
-        </div>
+        <div className="modal-left-bg"></div>
 
         <div className="skill-container">
           <div className="jobs">
+            <div className="timeline">
+              <p>2021</p>
+              <p>2002</p>
+            </div>
             <ul className="job-list">
               {props.jobs.map((el, index) => {
                 return <Job key={index} job={el.job} employer={el.employer} />;
@@ -52,10 +50,7 @@ const SkillsModal = (props) => {
             />
             <h1 className="date">2021</h1>
             <h3>Fullstack Developer</h3>
-            <p>
-              I had a lot of fun programming the escape games and gadgets and so
-              I decided to get a course to be able to do this professionaly
-            </p>
+            <p>HTML / CSS / JS / React / Redux </p>
           </div>
         </div>
       </section>

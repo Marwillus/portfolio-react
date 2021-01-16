@@ -1,25 +1,6 @@
-.form {
+.form-container {
   position: relative;
   height: 35rem;
-}
-.form form {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  transform: translateY(6rem);
-  width: 50%;
-  padding: 2rem;
-}
-.form form * {
-  background-color: #fbcea1;
-  border: none;
-  border-radius: 6px;
-  margin: 6px;
-  padding-left: 1rem;
-  z-index: 0;
-}
-.form form input {
-  height: 2rem;
 }
 .form-skewed {
   position: absolute;
@@ -32,4 +13,32 @@
   background: #feb062;
   transform: skewY(-3deg);
   z-index: -1;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  transform: translateY(6rem);
+  width: 50%;
+  padding: 2rem;
+}
+.form * {
+  background-color: #fbcea1;
+  border: none;
+  border-radius: 6px;
+  margin: 6px;
+  padding-left: 1rem;
+  z-index: 0;
+}
+.form input {
+  height: 2rem;
+}
+.form textarea {
+  resize: vertical;
+}
+#send-btn {
+  background: #fe7962;
+  /* background-color: #ff665b; */
+  color: #f4f4f4;
+  font-weight: bold;
 }
