@@ -68,8 +68,9 @@ const ProjectSwiper = (props) => {
               </p>
             </div>
           </div>
+
           {props.projects.map((project, index) => (
-            <div key={index}>
+            <div>
               <div
                 className="project-img"
                 style={{
@@ -77,12 +78,21 @@ const ProjectSwiper = (props) => {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
+                key={"projectSlider" + index}
               >
-                {" "}
-              </div>
-              <div className="project-info">
-                <h1>{project.name}</h1>
-                <p>{project.description}</p>
+                <div className="project-info">
+                  <div className="project-thumbs">
+                    {project.thumbs.map((img, i) => {
+                      return (
+                        <img src={img} alt={"thumb" + i} key={"thumb" + i} />
+                      );
+                    })}
+                  </div>
+                  <div className="project-text">
+                    <h1>{project.name}</h1>
+                    <p>{project.description}</p>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

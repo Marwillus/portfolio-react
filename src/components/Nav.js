@@ -1,13 +1,5 @@
 import Logo from "../images/logo_symbol.svg";
-import {
-  Link,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link } from "react-scroll";
 import "./styles/navbar.css";
 
 const Navbar = () => {

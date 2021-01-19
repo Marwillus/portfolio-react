@@ -1,6 +1,6 @@
 import Job from "./Job";
 import "./styles/modals.css";
-import { IoCaretUpSharp } from "react-icons/io5";
+// import { IoCaretUpSharp } from "react-icons/io5";
 
 const SkillsModal = (props) => {
   const showHideClassName = props.show
@@ -11,23 +11,19 @@ const SkillsModal = (props) => {
       props.closeModal();
     }
   };
+  const showJob = (job) => {
+    const img = job.img;
+    const name = job.job;
+    const time = job.start;
+    const quali = job.qualification;
+    return [img, name, time, quali];
+  };
   return (
     <div
       id="modalFrame"
       className={showHideClassName}
       onClick={(e) => versteckModal(e)}
     >
-      {/* <IoClose
-        onClick={(e) => versteckModal(e)}
-        size="3rem"
-        style={{
-          position: "absolute",
-          color: "#f4f4f4",
-          top: "1rem",
-          right: "1rem",
-        }}
-        /> */}
-
       <section className={"modal-main"}>
         <div className="modal-left-bg"></div>
 
@@ -39,7 +35,14 @@ const SkillsModal = (props) => {
             </div>
             <ul className="job-list">
               {props.jobs.map((el, index) => {
-                return <Job key={index} job={el.job} employer={el.employer} />;
+                return (
+                  <Job
+                    onClick={showJob(el)}
+                    key={index}
+                    job={el.job}
+                    employer={el.employer}
+                  />
+                );
               })}
             </ul>
           </div>
